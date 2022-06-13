@@ -2,7 +2,6 @@ const m_usuarios = require("../modelos/m_usuarios")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-const SECRETO = process.env.SECRETO || 'Carlos_Vacío_y_los_Tal'
 
 const c_login = async (req, res)=>{
     const user= req.body.user
@@ -25,7 +24,7 @@ const c_login = async (req, res)=>{
                         user: usuarioEncontrado.user
                     } //datos que queremos encriptar
                 }, 
-                SECRETO, //palabra secreta para hacer la encriptación
+                process.env.SECRETO, //palabra secreta para hacer la encriptación
                 { expiresIn: 60 * 60 } //1 hora antes de caducar
             );
 

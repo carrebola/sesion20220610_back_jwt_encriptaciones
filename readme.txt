@@ -31,8 +31,10 @@ Proceso construcción API
 17. Crear endpoint mascotas para asegurarnos que solo pueden entrear los usuarios registrados.
 18. Crear un middleware auth que comprueba que la petición se hace enviando el token y que el token corresponde a un usuario real
 ---
-* verificar con otro middleware que el rol que tiene el usuario corrsponde al necesario para entrar en ese endpoint
+18. Crear endpoint de usuarios para limitar el acceso a usuarios con los roles admin y gestorUsuarios 
+19. verificar con postman todos los endpoints
 
+---
 * crear endpoints para subir archivos al servidor usando 'multer'
 * manipularemos archivos en el servidor usando 'js-extra'
 
